@@ -1821,6 +1821,32 @@ func NewWithPositionalArgs(name string, numberOfArgs int, cacheable bool, expr g
 	return function
 }
 
+// compatFakerFunctions are zero-argument DSL functions whose gofakeit lookups
+// were removed in v7.18. They are kept under their established names so that
+// existing expressions keep working.
+var compatFakerFunctions = []struct {
+	name string
+	gen  func() string
+}{
+	{"rand_simple_sentence", func() string { return gofakeit.Sentence() }},
+	{"rand_error_object_word", func() string { return gofakeit.ErrorObject().Error() }},
+	{"rand_emoji_description", emojiDescription},
+}
+
+// emojiDescription returns the description of a random emoji lookup.
+func emojiDescription() string {
+	var descriptions []string
+	for _, info := range gofakeit.FuncLookups {
+		if info.Category == "emoji" && info.Description != "" {
+			descriptions = append(descriptions, info.Description)
+		}
+	}
+	if len(descriptions) == 0 {
+		return ""
+	}
+	return gofakeit.RandomString(descriptions)
+}
+
 // FakerFunctions returns the faker functions
 //
 // Note: It does not support backwards compatibility for function names
@@ -1880,6 +1906,23 @@ func FakerFunctions() map[string]govaluate.ExpressionFunction {
 			panic(fmt.Errorf("%w (faker)", err))
 		}
 		funcs[funcName] = f
+	}
+
+	for _, compat := range compatFakerFunctions {
+		gen := compat.gen
+		f := func(args ...any) (any, error) {
+			if len(args) != 0 {
+				return nil, fmt.Errorf("expected 0 arguments, got %d", len(args))
+			}
+			return gen(), nil
+		}
+		err := addFakerFunction(NewWithSingleSignature(
+			compat.name, "() string", false, f,
+		))
+		if err != nil && !errors.Is(err, errDuplicateFunc) {
+			panic(fmt.Errorf("%w (faker)", err))
+		}
+		funcs[compat.name] = f
 	}
 
 	return funcs
