@@ -9,7 +9,7 @@ require (
 	github.com/gosimple/slug v1.15.0
 	github.com/hashicorp/go-version v1.6.0
 	github.com/iangcarroll/cookiemonster v1.6.0
-	github.com/kataras/jwt v0.1.8
+	github.com/kataras/jwt v0.2.0
 	github.com/logrusorgru/aurora v2.0.3+incompatible
 	github.com/pkg/errors v0.9.1
 	github.com/projectdiscovery/gologger v1.1.75
