@@ -12,10 +12,10 @@ require (
 	github.com/kataras/jwt v0.1.8
 	github.com/logrusorgru/aurora v2.0.3+incompatible
 	github.com/pkg/errors v0.9.1
-	github.com/projectdiscovery/gologger v1.1.75
+	github.com/projectdiscovery/gologger v1.1.76
 	github.com/projectdiscovery/gostruct v0.0.2
 	github.com/projectdiscovery/mapcidr v1.1.97
-	github.com/projectdiscovery/utils v0.11.13
+	github.com/projectdiscovery/utils v0.11.17
 	github.com/spaolacci/murmur3 v1.1.0
 	github.com/spf13/cast v1.10.0
 	github.com/stretchr/testify v1.12.1
@@ -42,7 +42,7 @@ require (
 	github.com/microcosm-cc/bluemonday v1.0.27 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
-	github.com/projectdiscovery/blackrock v0.0.2 // indirect
+	github.com/projectdiscovery/blackrock v0.0.4 // indirect
 	github.com/projectdiscovery/govaluate v0.0.0-20260504230327-80320480bb6e
 	github.com/saintfish/chardet v0.0.0-20230101081208-5e3ef4b5456d // indirect
 	github.com/tidwall/gjson v1.18.0 // indirect
