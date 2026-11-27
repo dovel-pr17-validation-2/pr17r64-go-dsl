@@ -47,8 +47,8 @@ github.com/modern-go/reflect2 v1.0.2/go.mod h1:yWuevngMOJpCy52FWWMvUC8ws7m/LJsjY
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
-github.com/projectdiscovery/blackrock v0.0.2 h1:mxXdu0uM8P2L2Qi210COlU8QiICPFW/Rxk5QUhlPO2k=
-github.com/projectdiscovery/blackrock v0.0.2/go.mod h1:ANUtjDfaVrqB453bzToU+YB4cUbvBRpLvEwoWIwlTss=
+github.com/projectdiscovery/blackrock v0.0.4 h1:xFqk3gqbLDfJuqfpTer+rtwz3q7JLnz/a/A2hbFB8rI=
+github.com/projectdiscovery/blackrock v0.0.4/go.mod h1:ANUtjDfaVrqB453bzToU+YB4cUbvBRpLvEwoWIwlTss=
 github.com/projectdiscovery/gologger v1.1.75 h1:w+8DgCOCFpUegE2Ww8LQBUWPACkJUOvJ4Q1C0f2N9qI=
 github.com/projectdiscovery/gologger v1.1.75/go.mod h1:LDeWHizV+0QVuvDP4uJHM/M+eQlp0XLWlQ1z8PgOE1k=
 github.com/projectdiscovery/gostruct v0.0.2 h1:s8gP8ApugGM4go1pA+sVlPDXaWqNP5BBDDSv7VEdG1M=
